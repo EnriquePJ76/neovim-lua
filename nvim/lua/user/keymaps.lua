@@ -1,0 +1,6 @@
+
+-- Leader
+vim.g.mapleader = ' '
+
+
+
