@@ -39,22 +39,49 @@ end
 lazy.opts = {}
 
 lazy.setup({
-  { 'folke/tokyonight.nvim' },
-  { 'nvim-lualine/lualine.nvim' },
-  { 'nvim-tree/nvim-web-devicons' },
- 
-  { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
-  { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
-  { 'nvim-treesitter/nvim-treesitter' },
+  --{ 'folke/tokyonight.nvim' },
+  { 'tanvirtin/monokai.nvim' },
 
+  { 'nvim-lualine/lualine.nvim' },
+
+  { 'nvim-tree/nvim-web-devicons' },
   { 'nvim-tree/nvim-tree.lua' },
-  { 'akinsho/toggleterm.nvim', version='*', config=true },
+ 
+  {
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = "ibl",
+    opts = {}
+  },
+
+  { 'nvim-treesitter/nvim-treesitter' },
+  { 'nvim-treesitter/nvim-treesitter-textobjects' },
+  { 'wellle/targets.vim' },
+  { 'numToStr/Comment.nvim' },
+
+  { 'tpope/vim-surround' },
+  
+  { 'BurntSushi/ripgrep' },
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+
+  {
+    'akinsho/toggleterm.nvim',
+    version='*',
+    config=true
+  },
 
   { 'tpope/vim-fugitive' },
   { 'lewis6991/gitsigns.nvim' },
 
-  { 'neovim/nvim-lspconfig' },
-  { 'hrsh7th/cmp-nvim-lsp' },
+  --{ 'neovim/nvim-lspconfig' },
+  --{ 'hrsh7th/cmp-nvim-lsp' },
 
 })
 
