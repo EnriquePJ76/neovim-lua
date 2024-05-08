@@ -39,8 +39,11 @@ end
 lazy.opts = {}
 
 lazy.setup({
-  --{ 'folke/tokyonight.nvim' },
-  { 'tanvirtin/monokai.nvim' },
+  -- Themes
+  { 'folke/tokyonight.nvim' },
+  --{ 'joshdick/onedark.vim' },   -- Atom
+  --{ 'lunarvim/darkplus.nvim' }, -- VSCode
+  --{ 'tanvirtin/monokai.nvim' }, -- Sublime Text
 
   { 'nvim-lualine/lualine.nvim' },
 

@@ -1,6 +1,8 @@
 
---vim.cmd.colorscheme('tokyonight')
-vim.cmd.colorscheme('monokai')
+vim.cmd.colorscheme('tokyonight')
+--vim.cmd.colorscheme('onedark')  -- Atom
+--vim.cmd.colorscheme('darkplus') -- VSCode
+--vim.cmd.colorscheme('monokai')  -- Sublime Text
 
 vim.opt.guifont=Hack
 
@@ -10,7 +12,8 @@ require('ibl').setup({
     enabled = false,
   },
   indent = {
-    char = '|',
+    --char = '|',
+    char = '▎',
   },
 })
 

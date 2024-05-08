@@ -1,10 +1,14 @@
 
 require('lualine').setup({
   options = {
+    theme = 'tokyonight',
     icons_enabled = false,
     --component_separators = '|',
     --section_separators = '',
-  }
+    --disable_filetypes = {
+    --  statusline = { 'NvimTree' }
+    --}
+  },
 })
 
 require('bufferline').setup({
@@ -54,7 +58,7 @@ require('nvim-tree').setup({
     sorter = 'case_sensitive',
   },
   view = {
-    width = 30,
+    width = 40,
   },
   renderer = {
     group_empty = true,
@@ -70,8 +74,10 @@ vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 vim.keymap.set('n', '<F2>', '<cmd>NvimTreeToggle<cr>')
 
 require('toggleterm').setup({
-  open_mapping = '<C-g>',
-  direction = 'horizontal',
+  open_mapping = '<C-t>',
+  --direction = 'horizontal',
+  direction = 'vertical',
+  size = 90,
   shade_terminals = true,
 })
 
