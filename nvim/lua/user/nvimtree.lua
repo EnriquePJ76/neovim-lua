@@ -1,29 +1,5 @@
 
-require('lualine').setup({
-  options = {
-    theme = 'tokyonight',
-    icons_enabled = false,
-    --component_separators = '|',
-    --section_separators = '',
-    --disable_filetypes = {
-    --  statusline = { 'NvimTree' }
-    --}
-  },
-})
-
-require('bufferline').setup({
-  options = {
-    mode = 'buffers',
-    offsets = {
-      { filetype = 'NvimTree' }
-    },
-  },
-  highlights = {
-    buffer_selected = {
-      italic = true
-    },
-  }
-})
+-- SIDEBAR
 
 local function nvim_tree_on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -53,6 +29,10 @@ local function nvim_tree_on_attach(bufnr)
 
 end
 
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require('nvim-tree').setup({
   sort = {
     sorter = 'case_sensitive',
@@ -68,16 +48,13 @@ require('nvim-tree').setup({
   },
   hijack_cursor = false,
   on_attach = nvim_tree_on_attach,
+  -- sshfs reload
+  auto_reload_on_write = true,
+  filesystem_watchers = {
+    enable = false,
+  },
 })
 
 vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 vim.keymap.set('n', '<F2>', '<cmd>NvimTreeToggle<cr>')
-
-require('toggleterm').setup({
-  open_mapping = '<C-t>',
-  --direction = 'horizontal',
-  direction = 'vertical',
-  size = 90,
-  shade_terminals = true,
-})
 
