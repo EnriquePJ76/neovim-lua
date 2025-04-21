@@ -17,4 +17,8 @@ vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 --vim.keymap.set('n', '<leader>fd', '<cmd>Telescope diagnostics<cr>')
 vim.keymap.set('n', '<leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 
+-- Neo-tree
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>')
+vim.keymap.set('n', '<F2>', '<cmd>Neotree toggle<cr>')
+
 

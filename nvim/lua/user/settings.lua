@@ -18,6 +18,14 @@ vim.opt.hlsearch = false
 -- Mouse
 vim.opt.mouse = 'a'
 
--- Color
+-- Color & theme
 vim.opt.termguicolors = true
+
+--vim.cmd.colorscheme('tokyonight')
+--vim.cmd.colorscheme('onedark')  -- Atom
+vim.cmd.colorscheme('darkplus') -- VSCode
+--vim.cmd.colorscheme('monokai')  -- Sublime Text
+
+vim.opt.guifont=Hack
+
 

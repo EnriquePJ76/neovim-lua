@@ -79,6 +79,13 @@ lazy.setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
+  -- Remote
+  { 
+    'nosduco/remote-sshfs.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim' },
+    opts = {},
+  },
+
   -- Shell
   {
     'akinsho/toggleterm.nvim',
