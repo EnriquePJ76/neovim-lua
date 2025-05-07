@@ -9,6 +9,7 @@ vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.wrap = false
 vim.opt.breakindent = true
+vim.opt.colorcolumn = '80'
 
 -- Search
 vim.opt.ignorecase = true

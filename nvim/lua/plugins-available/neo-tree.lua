@@ -17,11 +17,11 @@ vim.fn.sign_define(
   {text = "󰌵", texthl = "DiagnosticSignHint"}
 )
 
-return { 
+return {
   {
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
-    dependencies = { 
+    dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
       'MunifTanjim/nui.nvim',
@@ -46,6 +46,9 @@ return {
         end,
       }
     },
+    --opts = {
+    --  close_if_last_window = true, -- 
+    --},
     config = function()
       require("neo-tree").setup({
         close_if_last_window = false,         -- Close Neo-tree if it is the last window left in the tab
@@ -59,7 +62,7 @@ return {
         },
         sort_case_insensitive = false,       -- used when sorting files and directories in the tree
         sort_function = nil ,                -- use a custom function for sorting files and directories in the tree 
-      
+
         -- This sorts files and directories descendantly
         --sort_function = function (a,b)
         --  if a.type == b.type then
@@ -89,7 +92,7 @@ return {
             expander_expanded = "",
             expander_highlight = "NeoTreeExpander",
           },
-      
+
           icon = {
             folder_closed = "",
             folder_open = "",
@@ -110,18 +113,18 @@ return {
             default = "*",
             highlight = "NeoTreeFileIcon"
           },
-      
+
           modified = {
             symbol = "[+]",
             highlight = "NeoTreeModified",
           },
-      
+
           name = {
             trailing_slash = false,
             use_git_status_colors = true,
             highlight = "NeoTreeFileName",
           },
-      
+
           git_status = {
             symbols = {
               -- Change type
@@ -163,12 +166,12 @@ return {
             enabled = true,
           },
         },
-      
+
         -- A list of functions, each representing a global custom command
         -- that will be available in all sources (if not overridden in `opts[source_name].commands`)
         -- see `:h neo-tree-custom-commands-global`
         commands = {},
-      
+
         window = {
           position = "left",
           width = 40,
@@ -179,8 +182,8 @@ return {
           },
 
           mappings = {
-            ["<space>"] = { 
-                "toggle_node", 
+            ["<space>"] = {
+                "toggle_node",
                 nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use 
             },
             ["<2-LeftMouse>"] = "open",
@@ -202,7 +205,7 @@ return {
             -- ['C'] = 'close_all_subnodes',
             ["z"] = "close_all_nodes",
             --["Z"] = "expand_all_nodes",
-            ["a"] = { 
+            ["a"] = {
               "add",
               -- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
               -- some commands may take optional config options, see `:h neo-tree-mappings` for details
@@ -232,12 +235,12 @@ return {
             ["i"] = "show_file_details",
           }
         },
-      
+
         nesting_rules = {},
-      
+
         filesystem = {
           filtered_items = {
-            visible = false,         -- when true, they will just be displayed differently than normal items
+            visible = true,         -- when true, they will just be displayed differently than normal items
             hide_dotfiles = true,
             hide_gitignored = false,
             hide_hidden = true,      -- only works on Windows for hidden files/directories
@@ -309,10 +312,10 @@ return {
               -- ['<key>'] = function(state, scroll_padding) ... end,
             },
           },
-      
+
           commands = {} -- Add a custom command or override a global one using the same function name
         },
-      
+
         buffers = {
           follow_current_file = {
             enabled = true,          -- This will find and focus the file in the active buffer every time
@@ -336,7 +339,7 @@ return {
             }
           },
         },
-      
+
         git_status = {
           window = {
             position = "float",
@@ -359,7 +362,7 @@ return {
             }
           }
         }
-        
+
       })
 
       vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
