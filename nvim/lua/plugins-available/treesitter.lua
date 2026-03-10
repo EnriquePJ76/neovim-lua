@@ -4,6 +4,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
     config = function()
       require('nvim-treesitter.configs').setup({
+	auto_install = true,
         highlight = {
           enable = true,
         },
@@ -28,7 +29,14 @@ return {
           'typescript',
           'lua',
           'tsx',
-        }
+	  'markdown',
+        },
+	indent = {
+	  enabled = true,
+	},
+	autotag = {
+	  enabled = true,
+	}
       })
     end
   },

@@ -13,6 +13,7 @@ require('user.settings')
 --require('user.shell')
 
 require('user.keymaps')
+--require('user.python')
 
 --require('user.remote')
 

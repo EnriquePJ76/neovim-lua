@@ -11,7 +11,7 @@ return {
       local servers = { 
         'html',
         'cssls',
-        'tsserver',
+        'ts_ls', --'tsserver',
         'pyright',
         'lua_ls',
         'jsonls'
